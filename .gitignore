@@ -1,0 +1,4 @@
+node_modules
+.seen.json
+results/*
+!results/.gitkeep

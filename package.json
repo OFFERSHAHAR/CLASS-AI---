@@ -1,0 +1,13 @@
+{
+  "name": "liquid-watch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Every-hour scraper for Claude / OpenCode / Hermes tutorials and videos",
+  "scripts": {
+    "scrape": "node scraper.mjs",
+    "watch": "node -e \"setInterval(async()=>{await(await import('./scraper.mjs')).main()},3600000)\"",
+    "once": "node scraper.mjs",
+    "start": "node -e \"(async()=>{await(await import('./scraper.mjs')).main();setInterval(async()=>{await(await import('./scraper.mjs')).main()},3600000)})()\""
+  }
+}
